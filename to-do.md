@@ -6,7 +6,7 @@ List the following types (categories) of resources
     - 
 - Video Series
 - Online training (Pluralsight)
-- Training sidtes (MS learn)
+- Training sites (MS learn)
 - Online simulators (try.net)
 - Concepts
     - Glossary
