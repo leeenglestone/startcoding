@@ -15,6 +15,9 @@ List the following types (categories) of resources
 To do
 - Introduction
     - Why Start-Coding.com?
+- Meta data
+- Robots.txt
+- OpenGraph
 
 
 - Languages section. List languages
