@@ -1,8 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
 		<title>Start Coding</title>
+		<link rel=“canonical” href=“http://www.start-coding.com/” />
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CTSW062H6H"></script>
+		
 		<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -10,41 +15,104 @@
 
 		gtag('config', 'G-CTSW062H6H');
 		</script>
+
+		<link rel="stylesheet" href="style/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+
 	</head>
 	<body>
-		<h1>Start Coding</h1>
-		<ul>
-			<li><a href=""></a></li>
-		</ul>
+		<h1>How to Start Coding?</h1>
+		<p>Various resources to help you start learning how to code.</p>
 
-		<h2>Books</h2>
-		<ul>
-			<li><a href="https://amzn.to/3yf89Wl">Get Coding</a></li>
-			<li><a href="https://amzn.to/3zRUhlk">Get Coding 2</a></li>
-		</ul>
+		<div id="categoriesDiv" class="categories"></div>
 
-		<h2>Online Training</h2>
-		<ul>
-			<li><a href="https://www.pluralsight.com/">Pluralsight</a></li>
-			<li><a href="https://www.codecademy.com/">Code Academy</a></li>
-		</ul>
+		<div class="clear" />
 
-		<h2>Code Camps</h2>
-		<ul>
-			<li><a href="https://www.freecodecamp.org/">Free Code Camp</a></li>
-			<li><a href="https://northcoders.com/">North Coders</a></li>
-			<li><a href="https://www.codecamp.co.uk/">Code Camp</a></li>
-			<li><a href="https://www.schoolofcode.co.uk/">School of Code</a></li>
-			<li><a href="https://wearecodenation.com/">Code Nation</a></li>
+		<script>
 
-			
+			var items = {
+				"categories": [
+					{ 
+						"name": "Books", 
+						"items": 
+						[
+							{"title":"Get Coding", "link": "https://amzn.to/3yf89Wl", "image": "books/get-coding.jpg" },
+							{"title":"Get Coding 2", "link": "https://amzn.to/3zRUhlk", "image": "books/get-coding-2.jpg" },
+							//{"title":"My Title", "link": "http://www.google.com", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png" },
+							//{"title":"My Title", "link": "http://www.google.com", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png" },
+							//{"title":"My Title", "link": "http://www.google.com", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png" },
+						]
+					},
+					{ 
+						"name": "Online Training", 
+						"items": 
+						[
+							{"title":"Pluralsight", "link": "https://www.pluralsight.com/", "image": "online-training/pluralsight.png" },
+							{"title":"Code Academy", "link": "https://www.codecademy.com/", "image": "online-training/code-academy.jpg" },
+							{"title":"Microsoft Learn", "link": "https://docs.microsoft.com/en-us/learn/", "image": "online-training/microsoft-learn.jpg" },
+							{"title":"LinkedIn Learning", "link": "https://www.linkedin.com/learning/subscription/topics/developer", "image": "online-training/linkedin-learning.jpg" },
+							{"title":"JetBrains Academy", "link": "https://www.jetbrains.com/academy/", "image": "online-training/jetbrains.png" },
+							{"title":"Udemy", "link": "https://www.udemy.com/courses/search/?src=ukw&q=start+coding", "image": "online-training/udemy.jpg" },
 
-			
+						]
+					},
+					{ 
+						"name": "Code Camps", 
+						"items": 
+						[
+							{"title":"Free Code Camp", "link": "https://www.freecodecamp.org/", "image": "code-camps/free-code-camp.jpg" },
+							{"title":"North Coders", "link": "https://northcoders.com/", "image": "code-camps/north-coders.png" },
+							{"title":"Code Camp", "link": "https://www.codecamp.co.uk/", "image": "code-camps/code-camp.jpg" },
+							{"title":"School of Code", "link": "https://www.schoolofcode.co.uk/", "image": "code-camps/school-of-code.png" },
+							{"title":"Code Nation", "link": "https://wearecodenation.com/", "image": "code-camps/code-nation.png" },
+						]
+					},
+				]
+			};
 
-			
-			
-		</ul>
+			var categoriesDiv = document.getElementById('categoriesDiv');
 
+			// Categories
+			items.categories.forEach(c => {
+				var categoryDiv = document.createElement('div');
+				categoryDiv.classList.add("category");
+
+				var heading = document.createElement('h2');
+				heading.innerHTML = c.name;
+
+				categoryDiv.appendChild(heading);
+
+				// Items
+				c.items.forEach(i => 
+				{
+					var itemDiv = document.createElement('div');
+					itemDiv.classList.add("item");
+
+					// Heading
+					var itemHeading = document.createElement('h2');
+					itemHeading.innerHTML = i.title;				
+					itemDiv.appendChild(itemHeading);
+				
+					// Image
+					var itemImage = document.createElement('img');
+					itemImage.src = "images/" + i.image;
+					itemImage.alt = i.title;
+					itemImage.title = i.title;
+					
+					// Link
+					var itemLink = document.createElement('a');
+					itemLink.href = i.link;
+					itemLink.appendChild(itemImage);
+					itemDiv.appendChild(itemLink);
+				
+					categoryDiv.appendChild(itemDiv);
+				});
+				
+				categoriesDiv.appendChild(categoryDiv);
+			});
+
+		</script>
 
 	</body>
 </html>
