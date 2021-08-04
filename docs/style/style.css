@@ -19,6 +19,7 @@ body
     height:240px;
     margin:auto 5px;
     min-height: 100px;
+    text-align: center;
     width:150px;
 
 }
@@ -30,12 +31,15 @@ body
 .category .item h2
 {
     color:#333;
-    font-size:1em;
+    font-size:0.9em;
+    height:25px;
     text-align: center;
 }
 
 .category .item img {
-    width:150px;
+    max-height:150px;
+    max-width:150px;
+    text-align:center;
 
 }
 
