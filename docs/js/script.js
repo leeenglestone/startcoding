@@ -17,12 +17,11 @@ var items = {
             "items": 
             [
                 {"title":"Pluralsight", "link": "https://www.pluralsight.com/", "image": "online-training/pluralsight.png" },
-                {"title":"Code Academy", "link": "https://www.codecademy.com/", "image": "online-training/code-academy.jpg" },
+                {"title":"Codecademy", "link": "https://www.codecademy.com/", "image": "online-training/code-academy.jpg" },
                 {"title":"Microsoft Learn", "link": "https://docs.microsoft.com/en-us/learn/", "image": "online-training/microsoft-learn.jpg" },
                 {"title":"LinkedIn Learning", "link": "https://www.linkedin.com/learning/subscription/topics/developer", "image": "online-training/linkedin-learning.jpg" },
                 {"title":"JetBrains Academy", "link": "https://www.jetbrains.com/academy/", "image": "online-training/jetbrains.png" },
-                {"title":"Udemy", "link": "https://www.udemy.com/courses/search/?src=ukw&q=start+coding", "image": "online-training/udemy.jpg" },
-                //https://code.org/
+                {"title":"Udemy", "link": "https://www.udemy.com/courses/search/?src=ukw&q=start+coding", "image": "online-training/udemy.jpg" }
             ]
         },
         { 
