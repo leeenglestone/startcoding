@@ -1,0 +1,45 @@
+body
+{
+    font-family: arial,sans-serif;
+}
+
+
+
+.category{
+    clear:both;
+    height: 300px;
+    margin-top:20px;
+}
+
+
+.category .item 
+{
+    
+    float:left;
+    height:240px;
+    margin:auto 5px;
+    min-height: 100px;
+    width:150px;
+
+}
+
+.category .item .name {
+    
+}
+
+.category .item h2
+{
+    color:#333;
+    font-size:1em;
+    text-align: center;
+}
+
+.category .item img {
+    width:150px;
+
+}
+
+.clear
+{
+    clear:both;
+}
